@@ -76,3 +76,46 @@ p {
     text-align: center;
 }
 
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
+    gap: 10px;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.card {
+    width: 100px;
+    height: 162px;
+    border: 1px solid #00000041;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    background-color: #f0f0f0;
+    background-image: url('assets/images/playing-card-reverse.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.card.revealed {
+    background-image: none;
+}
+
+.card.revealed img {
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #00000041;
+}
+
+footer {
+    height: 80px;
+    border-top: 1px solid grey;
+    margin-top: 4.5rem;
+}
