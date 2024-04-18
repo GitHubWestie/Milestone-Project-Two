@@ -12,7 +12,7 @@ function initializeGame() {
             const cardElement = document.createElement('div');
             cardElement.className = 'card';
             cardElement.setAttribute('data-character', char);
-            cardElement.innerHTML = `<img src="assets/images/${char}.jpg" alt="${char}">`;
+            cardElement.innerHTML = `<img src="assets/images/${char}.webp" alt="${char}">`;
             cardDeck.push(cardElement);
         }
     });
@@ -26,6 +26,9 @@ function initializeGame() {
                 this.classList.toggle('revealed');
                 checkForMatch();
             }
+            setTimeout(()=>{
+                gameEnd(cardDeck);
+            }, 100);
         });
     });
 }
@@ -54,5 +57,42 @@ function checkForMatch() {
         }
     } else if(revealedCards.length > 2) {
         revealedCards.forEach(card => card.classList.remove('revealed'));
+    }
+}
+
+function gameEnd(array) {
+    const modal = document.querySelector('.game-end-modal');
+    const overlay = document.querySelector('.overlay');
+    const playAgainBtn = document.querySelector('.play-again');
+
+    const openModal = function () {
+        modal.classList.remove("hidden");
+        overlay.classList.remove("hidden");
+      };
+
+    const closeModal = function() {
+        modal.classList.add('hidden');
+        overlay.classList.add('hidden');
+    };
+
+    const playAgain = function() {
+        let resetBoard = document.getElementById('game-area');
+        resetBoard.innerHTML = '';
+        initializeGame();
+    };
+
+    let allCardsMatched = document.querySelectorAll('.matched');
+	if(array.length === allCardsMatched.length) {
+        openModal();
+        playAgainBtn.addEventListener('click', playAgain);
+        playAgainBtn.addEventListener('click', closeModal);
+        overlay.addEventListener("click", closeModal);
+        document.addEventListener("keydown", function (esc) {
+        if (esc.key === "Escape" && !modal.classList.contains("hidden")) {
+        closeModal();
+        }
+        });
+	} else {
+        return;
     }
 }
