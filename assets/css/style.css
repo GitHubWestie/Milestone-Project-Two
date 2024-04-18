@@ -92,7 +92,7 @@ p {
     cursor: pointer;
     position: relative;
     background-color: #f0f0f0;
-    background-image: url('assets/images/playing-card-reverse.jpg');
+    background-image: url(../images/playing-card-reverse.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
