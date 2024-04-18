@@ -1,5 +1,7 @@
 # Concentration Card Game
 
+![mockup]()
+
 ## Description
 
 Concentration is a card based memory game. Cards are laid face down on a surface and two cards are flipped to be face up each turn. The object of the game is to reveal matching pairs of cards, until all cards have been turned over. The game can be played just for fun as a memory exercise or competitively against the clock and with larger, more complex decks. It can also be played as a mulitplayer, round based game, although for the purposes of this project it is single player.
