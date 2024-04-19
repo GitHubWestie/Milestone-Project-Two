@@ -1,211 +1,221 @@
+@font-face {
+  font-family: 'Jersey10';
+  src: url(../fonts/Jersey10-Regular.ttf);
+}
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
 :root {
-    --ff-blue: #85B4F2;
-    --ff-dark-blue: #4694A6;
-    --ff-green: #267357;
-    --ff-dark-green: #012615;
-    --ff-smoke: #F2F2F2;
-  }
+  --ff-blue: #85B4F2;
+  --ff-dark-blue: #4694A6;
+  --ff-green: #267357;
+  --ff-dark-green: #012615;
+  --ff-smoke: #F2F2F2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Modal */
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+  position: relative;
+  min-height: 100vh;
+}
+
+.game-end-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.4rem;
+  max-width: 450px;
+  padding: 1.3rem;
+  min-height: 250px;
+  position: absolute;
+  background-color: white;
+  border: solid 4px var(--ff-smoke);
+  border-radius: 15px;
+  z-index: 2;
+}
   
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+.game-end-modal h3 {
+  text-align: center;
+  font-family: 'Jersey10', sans-serif;
+  font-size: 3.5rem;
+  background-image: 
+    linear-gradient(90deg, 
+    var(--ff-blue), 
+    var(--ff-dark-blue), 
+    var(--ff-green), 
+    var(--ff-dark-green));
+  background-clip: text;
+  color: transparent;
+}
+
+.game-end-modal p {
+  font-size: 0.9rem;
+  color: #777;
+}
   
-  /* Modal */
+button {
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+}
   
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #222;
-    position: relative;
-    min-height: 100vh;
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  font-weight: 700;
+  background-image: linear-gradient(90deg, var(--ff-blue), var(--ff-dark-blue), var(--ff-green), var(--ff-dark-green));
+  color: var(--ff-smoke);
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Main Content */
+
+.title-icon {
+  width: 45px;
+  margin-right: 14px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 150px;
+  font-family: "Jersey10", sans-serif;
+
+  background-image: linear-gradient(90deg, var(--ff-blue), var(--ff-dark-blue), var(--ff-green), var(--ff-dark-green));
+  background-clip: text;
+  color: transparent;
+}
+
+.main-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+.sub-title {
+  font-size: 1.5rem;
+  align-self: end;
+}
+
+.container {
+  max-width: 750px;
   }
-  
-  .game-end-modal {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 0.4rem;
-    max-width: 450px;
-    padding: 1.3rem;
-    min-height: 250px;
-    position: absolute;
-    background-color: white;
-    border: solid 4px var(--ff-smoke);
-    border-radius: 15px;
-    z-index: 2;
+
+.background {
+  background-image: linear-gradient(135deg, var(--ff-dark-blue), var(--ff-dark-green));
+  border: solid 4px var(--ff-smoke);
+  border-radius: 12px;
+  padding: 2rem 1rem;
   }
-    
-  .game-end-modal h3 {
-    text-align: center;
-    font-family: 'Jersey 10';
-    font-size: 3.5rem;
-    background-image: 
-      linear-gradient(90deg, 
-      var(--ff-blue), 
-      var(--ff-dark-blue), 
-      var(--ff-green), 
-      var(--ff-dark-green));
-    background-clip: text;
-    color: transparent;
-  }
-  
-  .game-end-modal p {
-    font-size: 0.9rem;
-    color: #777;
-  }
-    
-  button {
-    cursor: pointer;
-    border: none;
-    font-weight: 600;
-  }
-    
-  .btn {
-    display: inline-block;
-    padding: 0.8rem 1.4rem;
-    font-weight: 700;
-    background-image: linear-gradient(90deg, var(--ff-blue), var(--ff-dark-blue), var(--ff-green), var(--ff-dark-green));
-    color: var(--ff-smoke);
-    border-radius: 5px;
-    text-align: center;
-    font-size: 1em;
-  }
-  
-  .overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(3px);
-    z-index: 1;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  /* Main Content */
-  
-  .title-icon {
-    width: 45px;
-    margin-right: 14px;
-  }
-  
-  .title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 150px;
-    font-family: "Jersey 10", sans-serif;
-  
-    background-image: linear-gradient(90deg, var(--ff-blue), var(--ff-dark-blue), var(--ff-green), var(--ff-dark-green));
-    background-clip: text;
-    color: transparent;
-  }
-  
+
+h2 {
+  color: var(--ff-smoke);
+  font-family: 'Roboto-Regular', sans-serif;
+  font-size: 1.25rem;
+  margin: 0 0 1rem 0;
+  padding: 0 0.5rem;
+  text-decoration: underline;
+  text-align: center;
+}
+
+p {
+  color: var(--ff-smoke);
+  padding: 0 0.5rem;
+  font-family: 'Roboto-Regular', sans-serif;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  padding: 3rem 2rem;
+}
+
+.card {
+  width: 100px;
+  height: 162px;
+  border: 1px solid #00000041;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  background-color: #f0f0f0;
+  background-image: url(../images/playing-card-reverse.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 3px 5px 5px black;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.card.revealed {
+  background-image: none;
+}
+
+.card.revealed img {
+  display: block;
+  border-radius: 5px;
+  border: 1px solid #00000041;
+}
+
+/* media queries */
+
+@media screen and (max-width: 424px) {
   .main-title {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 2rem;
-    font-weight: 400;
-    font-style: normal;
-  
-  }
-  
-  .sub-title {
     font-size: 1.5rem;
-    align-self: end;
   }
-  
-  .container {
-    max-width: 750px;
-    }
-  
-  .background {
-    background-image: linear-gradient(135deg, var(--ff-dark-blue), var(--ff-dark-green));
-    border: solid 4px var(--ff-smoke);
-    border-radius: 12px;
-    padding: 2rem 1rem;
-    }
-  
-  h2 {
-    color: var(--ff-smoke);
-    font-family: 'roboto', sans-serif;
-    font-size: 1.25rem;
-    margin: 0 0 1rem 0;
-    padding: 0 0.5rem;
-    text-decoration: underline;
-    text-align: center;
-  }
-  
-  p {
-    color: var(--ff-smoke);
-    padding: 0 0.5rem;
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.9rem;
-    text-align: center;
-  }
-  
   .game-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    padding: 3rem 2rem;
+    padding: 2rem 1rem;
   }
-  
-  .card {
-    width: 100px;
-    height: 162px;
-    border: 1px solid #00000041;
-    border-radius: 5px;
-    cursor: pointer;
-    position: relative;
-    background-color: #f0f0f0;
-    background-image: url(../images/playing-card-reverse.webp);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: 3px 5px 5px black;
+  .game-end-modal h3 {
+    font-size: 2.75rem;
   }
-  
-  .card img {
-    width: 100%;
-    height: 100%;
-    display: none;
-  }
-  
-  .card.revealed {
-    background-image: none;
-  }
-  
-  .card.revealed img {
-    display: block;
-    border-radius: 5px;
-    border: 1px solid #00000041;
-  }
-  
-  /* media queries */
-  
-  @media screen and (max-width: 424px) {
-    .main-title {
-      font-size: 1.5rem;
-    }
-    .game-container {
-      padding: 2rem 1rem;
-    }
-    .game-end-modal h3 {
-      font-size: 2.75rem;
-    }
-  }
+}
