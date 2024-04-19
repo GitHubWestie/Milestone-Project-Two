@@ -32,7 +32,7 @@ function initializeGame() {
         });
     });
 }
-
+// Fisher Yates shuffle borrowed from Javascript.info
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
@@ -59,7 +59,7 @@ function checkForMatch() {
         revealedCards.forEach(card => card.classList.remove('revealed'));
     }
 }
-
+// Modal based on tutorial from freeCodeCamp.org and modified
 function gameEnd(array) {
     const modal = document.querySelector('.game-end-modal');
     const overlay = document.querySelector('.overlay');
