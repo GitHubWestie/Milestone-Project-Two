@@ -135,7 +135,7 @@ The site is deployed via GitHub Pages. Steps to deploy are as follows:
 |----------|---------------|
 | **As a first time user I want:** |
 | To be entertained | The game provides an entertaining experience with minmal learning curve so users can get into the game very quickly |
-|To know how to play | For users that are not familiar with the game there is a how to play positioned directly above the game area. The game is easy to learn and the how to is always there for referring back to if needed | 
+|To know how to play | For users that are not familiar with the game there is a 'how to play' positioned directly above the game area. The game is very easy to learn and the how to is always there for referring back to if needed | 
 | To challenge and improve memory | The positioning of the cards is randomised on every play meaning users memory will always be challenged |
 | To easily use the site | The site is simple to use with minimal fuss and simple design concepts such as a pointer over interactive elements that intuitively tell the user what is interactive. Consecutive plays are made easy by the modal that resets the game |
 | **As a returning user I want** |
@@ -165,9 +165,11 @@ Mobile Devices
 
 [W3C Markup Validator](https://validator.w3.org/)
 
-One error was found in the markup validator which had come across with copied code from google fonts. This was fixed by removing the trailing slash at the end of the tag.
+One issue was found in the markup validator which had come across with copied code from google fonts. This was fixed by removing the trailing slash at the end of the tag.
 
 ![markup-error](/assets/images/w3cMarkupError.png)
+
+![markup-ok](/assets/images/w3c-markup-ok.png)
 
 [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
 
@@ -181,9 +183,15 @@ JShint found some missing semi-colons which were quickly rectified.
 
 ![jshint](/assets/images/jshint-results.png)
 
+[WAVE](https://wave.webaim.org/)
+
+The WAVE tool for Web Accessibility found no errors
+
+![wave](/assets/images/wave-results.png)
+
 [Google Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)
 
-The page was run through Googe Lighthouse for desktop and mobile. Results from Lighthouse were inconsistent despite no changes being made between tests and any changes that were made to try and improve these inconsistencies made no difference. 
+The page was tested using Google Lighthouse for desktop and mobile. Results from Lighthouse were inconsistent despite no changes being made between tests. This seemed to be largely influenced by layout shifts. Despite this, acceptable scores were still achieved and through my own testing of the site on various devices, I did not notice any large layout shifts. Even when throttling was applied through devtools, only a slight layout shift occurred on initial load and did not negatively impact the UX.
 
 Desktop
 ![lighthouse desktop](/assets/images/lighthouse-desktop.png)
@@ -205,7 +213,6 @@ Mobile
 [W3Schools](https://www.w3schools.com/)
 
 [CodeCademy](https://www.codecademy.com/) 
-
 
 #### Images
 
