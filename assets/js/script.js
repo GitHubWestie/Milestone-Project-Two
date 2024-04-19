@@ -30,6 +30,14 @@ function initializeGame() {
                 gameEnd(cardDeck);
             }, 100);
         });
+        card.addEventListener('mouseover', function() {
+            card.style.scale = '1.02';
+            card.style.transition = '0.25s ease';
+        });
+        card.addEventListener('mouseleave', function() {
+            card.style.scale = '1';
+            card.style.transition = '0.25s ease';
+        });
     });
 }
 // Fisher Yates shuffle borrowed from Javascript.info

@@ -192,7 +192,7 @@ p {
   border-radius: 5px;
   cursor: pointer;
   position: relative;
-  background-color: #f0f0f0;
+  background-color: var(--ff-smoke);
   background-image: url(../images/playing-card-reverse.webp);
   background-size: contain;
   background-repeat: no-repeat;
