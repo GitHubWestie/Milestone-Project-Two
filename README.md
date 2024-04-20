@@ -161,6 +161,10 @@ Mobile Devices
 
 ![test-sheet](/assets/images/game-test-sheet.png)
 
+#### Play Testing
+
+In addition to my own play testing along the stages of development I also enlisted the help of friends and family to test the game on their own devices. They represent a range of ages, neuro-divergencies and disabilities. All found the game to be an enjoyable experience and intuitive to use with no accessibility issues.
+
 #### Automated Testing
 
 [W3C Markup Validator](https://validator.w3.org/)
@@ -234,4 +238,4 @@ Brain image supplied by [Vector Portal](https://vectorportal.com/vector/brain-ve
 
 ### Acknowledgements
 
-Big thanks again to my mentor Ronan for guidance and reassurance.
+Big thanks again to my mentor Ronan for guidance and reassurance and for Amy my cohort facilitator for checking in at just the right times.

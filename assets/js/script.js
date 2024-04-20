@@ -67,8 +67,9 @@ function checkForMatch() {
         revealedCards.forEach(card => card.classList.remove('revealed'));
     }
 }
-// Modal based on tutorial from freeCodeCamp.org and modified
+
 function gameEnd(array) {
+    // Modal based on tutorial from freeCodeCamp.org and modified
     const modal = document.querySelector('.game-end-modal');
     const overlay = document.querySelector('.overlay');
     const playAgainBtn = document.querySelector('.play-again');
