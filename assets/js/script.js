@@ -31,14 +31,21 @@ function initializeGame() {
             }, 100);
         });
         card.addEventListener('mouseover', function() {
-            card.style.scale = '1.02';
-            card.style.transition = '0.25s ease';
+            card.style.scale = '1.03';
+            card.style.transition = '0.075s ease';
         });
         card.addEventListener('mouseleave', function() {
             card.style.scale = '1';
-            card.style.transition = '0.25s ease';
+            card.style.transition = '0.075s ease';
         });
     });
+
+    const resetGame = document.querySelector('.reset-btn');
+    resetGame.addEventListener('click', function() {
+        let resetBoard = document.getElementById('game-area');
+        resetBoard.innerHTML = '';
+        initializeGame();
+    })
 }
 // Fisher Yates shuffle borrowed from Javascript.info
 function shuffle(array) {
