@@ -135,9 +135,6 @@ button {
   flex-direction: row;
   align-items: center;
   font-size: 2rem;
-  font-weight: 400;
-  font-style: normal;
-
 }
 
 .sub-title {
@@ -159,21 +156,21 @@ button {
   }
 
 h2 {
-  color: var(--ff-smoke);
   font-family: 'Roboto-Regular', sans-serif;
   font-size: 1.25rem;
+  text-align: center;
+  text-decoration: underline;
+  color: var(--ff-smoke);
   margin: 0 0 1rem 0;
   padding: 0 0.5rem;
-  text-decoration: underline;
-  text-align: center;
 }
 
 p {
-  color: var(--ff-smoke);
-  padding: 0 0.5rem;
   font-family: 'Roboto-Regular', sans-serif;
   font-size: 0.9rem;
   text-align: center;
+  color: var(--ff-smoke);
+  padding: 0 0.5rem;
 }
 
 .game-container {
@@ -213,25 +210,25 @@ p {
 
 .card.revealed img {
   display: block;
-  border-radius: 5px;
   border: 1px solid #00000041;
+  border-radius: 5px;
 }
 
 .reset-btn {
-  margin: 3rem auto;
   display: block;
-  padding: 0.8rem 1.4rem;
-  font-weight: 700;
+  font-family: 'Roboto-Regular', sans-serif;
+  font-size: 0.9rem;
   color: var(--ff-dark-green);
-  border-radius: 6px;
-  font-size: 1em;
+  margin: auto;
+  padding: 0.8rem 1.4rem;
   border: solid 2px var(--ff-dark-green);
+  border-radius: 6px;
   transition: 0.25s ease-in-out;
 }
 
 .reset-btn:hover {
-  background-color: var(--ff-green);
   color: var(--ff-smoke);
+  background-color: var(--ff-green);
 }
 
 /* media queries */

@@ -4,7 +4,7 @@
 
 ## Description
 
-Concentration is a card based memory game. Cards are laid face down on a surface and two cards are flipped to be face up each turn. The object of the game is to reveal matching pairs of cards, until all cards have been turned over. The game can be played just for fun, as a memory exercise or competitively against the clock and with larger, more complex decks. It can also be played as a mulitplayer, round based game, although for the purposes of this project it is single player.
+Concentration is a card based memory game. Cards are laid face down on a surface and two cards are flipped to be face up each turn. The object of the game is to reveal matching pairs of cards, until all cards have been turned over. The game can be played just for fun, as a memory exercise or competitively against the clock and with larger, more complex decks. It can also be played as a multiplayer, round based game, although for the purposes of this project it is single player.
 
 [The site is live and can be found here](https://githubwestie.github.io/Milestone-Project-Two/)
 
@@ -28,7 +28,7 @@ As a returning user I want:
 
 ### Structure
 
-A single page layout containg title, how to play section and then the game area. 
+A single page layout containing title, how to play section and the game area. 
 
 #### Page Goals
 
@@ -72,7 +72,7 @@ This provides a brief explanation of the main objective of the game and how to a
 #### Game -Area
 ![game-area](/assets/images/game-area.png)
 
-The game area contains all of the interactive elements required to play the game. The card elements are generated using JavaScript rather than being written into the HTML which should make the game easily scalable in the future when implementing different difficulty levels.
+The game area contains all of the interactive elements required to play the game. The card elements are generated using JavaScript rather than being written into the HTML which should make the game easily scalable in the future when implementing different difficulty levels. The cards also have a slight float when hovered over, giving the user feedback about which card they are going to interact with in a more tactile way.
 
 #### Cards
 ![cards](/assets/images/cards.png)
@@ -82,7 +82,12 @@ The character cards are based on a concept art style that you could expect to se
 #### Modal
 ![modal](/assets/images/congrats-modal.png)
 
-Upon successfully meeting the games requirements for completion a modal pops up with a congratulations message and a button to allow the user to easily play again. Clicking play again resets all game elements back to their default states and reshuffles the card deck so the experience is different every time.
+Upon successfully meeting the game requirements for completion, a modal pops up with a congratulations message and a button to allow the user to easily play again. Clicking play again resets all game elements back to their default states and reshuffles the card deck, so the experience is different every time.
+
+#### Reset Button
+![reset-btn](/assets/images/reset-btn.png)
+
+In addition to the play again button accessed via the modal on completion of the game, players can also utilise the reset button located under the game area at any time. This provides a more convenient way to start again should the player want to.
 
 ------------------------
 
@@ -99,6 +104,10 @@ Upon successfully meeting the games requirements for completion a modal pops up 
 * Scaleable variety of images/symbols to match based on difficulty
 
 * Deck randomiser so returning users see a variety of cards on consecutive visits
+
+* Flip animation for cards when selected
+
+* Flip animation for all cards when resetting the game via reset button or play again button
 
 ------------------------
 
@@ -134,7 +143,7 @@ The site is deployed via GitHub Pages. Steps to deploy are as follows:
 | Expected | Actual Result |
 |----------|---------------|
 | **As a first time user I want:** |
-| To be entertained | The game provides an entertaining experience with minmal learning curve so users can get into the game very quickly |
+| To be entertained | The game provides an entertaining experience with minimal learning curve so users can get into the game very quickly |
 |To know how to play | For users that are not familiar with the game there is a 'how to play' positioned directly above the game area. The game is very easy to learn and the how to is always there for referring back to if needed | 
 | To challenge and improve memory | The positioning of the cards is randomised on every play meaning users memory will always be challenged |
 | To easily use the site | The site is simple to use with minimal fuss and simple design concepts such as a pointer over interactive elements that intuitively tell the user what is interactive. Consecutive plays are made easy by the modal that resets the game |
@@ -163,7 +172,7 @@ Mobile Devices
 
 #### Play Testing
 
-In addition to my own play testing along the stages of development I also enlisted the help of friends and family to test the game on their own devices. They represent a range of ages, neuro-divergencies and disabilities. All found the game to be an enjoyable experience and intuitive to use with no accessibility issues.
+In addition to my own play testing along the stages of development I also enlisted the help of friends and family to test the game on their own devices. They represent a range of ages, neurodiversities and disabilities. All found the game to be an enjoyable experience and intuitive to use with no accessibility issues.
 
 #### Automated Testing
 
@@ -238,4 +247,4 @@ Brain image supplied by [Vector Portal](https://vectorportal.com/vector/brain-ve
 
 ### Acknowledgements
 
-Big thanks again to my mentor Ronan for guidance and reassurance and for Amy my cohort facilitator for checking in at just the right times.
+Big thanks again to my mentor Ronan for guidance and reassurance and for Amy, my cohort facilitator, for checking in at just the right times.
